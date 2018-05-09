@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-navbar>
+    <ion-searchbar (ionInput)="getItems()" debounce="1000" [(ngModel)]="searchText"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <a [href]="image.url" *ngFor="let image of images">
+    <img [src]="image.images.fixed_height_downsampled.url" [title]="image.title">
+  </a>
+</ion-content>
