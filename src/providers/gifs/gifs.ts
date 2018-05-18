@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 /*
-  Generated class for the HomeProvider provider.
+  Generated class for the GifsProvider provider.
 
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
@@ -15,7 +15,7 @@ export class GifsProvider {
   api_key = 'dc6zaTOxFJmzC';
 
   constructor(public http: HttpClient) {
-    console.log('Hello HomeProvider Provider');
+    console.log('Hello GifsProvider Provider');
   }
 
   getGifs() :Observable<any> {
