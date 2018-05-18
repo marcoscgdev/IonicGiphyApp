@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { HomeProvider } from '../providers/home/home';
+import { GifsProvider } from '../providers/gifs/gifs';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage
   ],
   imports: [
-    HttpClientModule, // Import it
+    HttpClientModule, // Import
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -28,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HomeProvider
+    GifsProvider
   ]
 })
 export class AppModule {}

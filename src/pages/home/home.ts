@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { HomeProvider } from '../../providers/home/home';
+import { GifsProvider } from '../../providers/gifs/gifs';
 
 @Component({
   selector: 'page-home',
@@ -11,18 +11,18 @@ export class HomePage {
   images;
   searchText;
 
-  constructor(public navCtrl: NavController, public HomeProvider: HomeProvider) {
+  constructor(public navCtrl: NavController, public GifsProvider: GifsProvider) {
 
   }
 
   ionViewDidLoad() {
-    this.HomeProvider.getGifs().subscribe(result => {
+    this.GifsProvider.getGifs().subscribe(result => {
       this.images = result;
     });
   }
 
   getItems() {
-    this.HomeProvider.searchGifs(this.searchText).subscribe(result => {
+    this.GifsProvider.searchGifs(this.searchText).subscribe(result => {
       this.images = result;
     });
   }
